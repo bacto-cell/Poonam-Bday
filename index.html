@@ -278,7 +278,7 @@
   </section>
 
   <div class="games-launcher">
-    <button type="button" id="openGames" onclick="window.location.href='photo-puzzle.html'">🎮 New Games</button>
+    <button type="button" id="openGames">🎮 New Games</button>
     <p>A little game made from a special memory 💗</p>
   </div>
 
@@ -312,7 +312,21 @@
   <div class="footer">MADE WITH LOVE · JUST FOR POONAM SAHOO</div>
 </main>
 
-
+<section class="photo-game" id="photoGame" hidden>
+  <h2>🧩 Our Photo Puzzle 💗</h2>
+  <p>One photo, nine little pieces, and one beautiful memory. Tap two pieces to swap them. Complete the picture as quickly as you can—the timer starts with every new game!</p>
+  <div class="puzzle-board" id="puzzleBoard" aria-label="3 by 3 photo puzzle"></div>
+  <div class="game-actions">
+    <button type="button" id="newPuzzle">↻ New Game</button>
+    <button type="button" id="showPreview">👀 Photo Preview</button>
+  </div>
+  <div class="game-status" id="puzzleStatus" aria-live="polite">Tap two tiles to swap their places.</div>
+  <div class="puzzle-clock" id="puzzleClock" aria-live="off">⏱ Time: 00:00</div>
+  <div id="puzzleWin" class="game-win" hidden>🎉 You did it! You put our memory back together. ❤️</div>
+  <div id="puzzlePreview" hidden style="margin-top:12px">
+    <img id="previewPhoto" alt="Photo preview" style="width:min(100%,260px);border-radius:14px;box-shadow:0 8px 25px #0005">
+  </div>
+</section>
 
 <script>
   // Countdown targets midnight at the start of 7 November 2026 (India Standard Time).
